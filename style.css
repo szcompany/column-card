@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@300;400;500;700;900&display=swap');
+
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --text-white: hsla(0, 0%, 100%, 0.75);
+    --bckg-color: hsl(0, 0%, 95%);
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+    background: var(--bckg-color);
+    min-height: 100vh;
+}
+
+.container {
+    display: grid;
+    /* place-items: center; */
+    grid-template-columns: 1fr;
+    width: 90vw;
+    margin: 5rem auto;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    color: var(--bckg-color);
+}
+
+.item {
+    padding: 3.2rem 3rem;
+}
+
+.item-1 {
+    background: var(--bright-orange);
+}
+
+.item-1 .item-btn {
+    color: var(--bright-orange);
+}
+
+.item-2 {
+    background: var(--dark-cyan);
+}
+
+.item-2 .item-btn {
+    color: var(--dark-cyan);
+}
+
+.item-3 {
+    background: var(--very-dark-cyan);
+}
+
+.item-3 .item-btn {
+    color: var(--very-dark-cyan);
+}
+
+
+.item-heading {
+    font-family: "Big Shoulders Display", cursive;
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 2rem 0;
+}
+
+.item-text {
+    color: var(--text-white);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.item-btn {
+    background: var(--bckg-color);
+    padding: 0.75rem 2rem;
+    border-radius: 2rem;
+    text-decoration: none;
+}
+
+
+@media screen and (min-width: 900px){
+    body {
+        display: flex;
+        align-items: center;
+    }
+    .container {
+        min-height: 35rem;
+        max-width: 70rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        border-radius: .8rem;
+        overflow: hidden;
+}
+
+.item-heading{
+    margin: 0;
+    font-size: 3rem;
+}
+
+.item-text{
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    
+}
+
+    
+}
